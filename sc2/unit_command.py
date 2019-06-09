@@ -1,16 +1,13 @@
-from . import unit as unit_module
-from .ids.ability_id import AbilityId
 from .position import Point2
-
+from .ids.ability_id import AbilityId
+from . import unit as unit_module
 
 class UnitCommand:
     def __init__(self, ability, unit, target=None, queue=False):
-        assert ability in AbilityId, f"ability {ability} is not in AbilityId"
-        assert isinstance(unit, unit_module.Unit), f"unit {unit} is of type {type(unit)}"
-        assert target is None or isinstance(
-            target, (Point2, unit_module.Unit)
-        ), f"target {target} is of type {type(target)}"
-        assert isinstance(queue, bool), f"queue flag {queue} is of type {type(queue)}"
+        assert ability in AbilityId
+        assert isinstance(unit, unit_module.Unit)
+        assert target is None or isinstance(target, (Point2, unit_module.Unit))
+        assert isinstance(queue, bool)
         self.ability = ability
         self.unit = unit
         self.target = target

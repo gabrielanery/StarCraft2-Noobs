@@ -9,14 +9,11 @@ async-timeout = "<4.0,>=3.0"
 "s2clientprotocol" = "*"
 aiohttp = "*"
 pyglet = "*"
-numpy = "*"
 
 [dev-packages]
 pytest = "*"
 mypy = "*"
 pillow = "*"
-pytest-asyncio = "*"
-hypothesis = "*"
 
 [requires]
 python_version = "3.7"
